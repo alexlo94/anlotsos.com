@@ -1,0 +1,25 @@
+{
+    "title": "_Alex | Portfolio",
+    "social": [
+        {
+            "href": "https://www.linkedin.com/in/alexlo94/",
+            "iconName": "logo-linkedin"
+        },
+        {
+            "href": "https://github.com/alexlo94",
+            "iconName": "logo-github"
+        },
+        {
+            "href": "https://www.instagram.com/alexlo94/",
+            "iconName": "logo-instagram"
+        },
+        {
+            "href": "https://twitter.com/alexlotsos",
+            "iconName": "logo-twitter"
+        },
+        {
+            "href": "mailto:anlotsos@gmail.com",
+            "iconName": "mail"
+        }
+    ]
+}

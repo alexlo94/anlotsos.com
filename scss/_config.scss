@@ -1,0 +1,117 @@
+// color and font variables
+$font-sans-serif: 'Roboto', sans-serif;
+$font-mono: 'Roboto Mono', monospace;
+$color-darkest: #320940;
+$color-darker: #8d3fa9;
+$color-main: #c82cff;
+$color-lighter: #de80ff;
+$color-lightest: #f8e3ff;
+
+// ratio and modular scale
+$ratio: 1.5;
+$s0: 1rem;
+$s1: $s0 * $ratio;
+$s2: $s1 * $ratio;
+$s3: $s2 * $ratio;
+$s4: $s3 * $ratio;
+$s5: $s4 * $ratio;
+$s-1: $s0 / $ratio;
+$s-2: $s-1 / $ratio;
+$s-3: $s-2 / $ratio;
+$s-4: $s-3 / $ratio;
+$s-5: $s-4 / $ratio;
+
+// measure and line height
+$measure: 60ch;
+$line-height: $ratio;
+$line-height-small: 0.8 * $ratio;
+
+// Set font, color, line height etc in root
+:root {
+  //line-height: $ratio;
+  font-size: 1em;
+  font-family: $font-sans-serif;
+  background-color: $color-lightest;
+  color: $color-darkest;
+}
+
+h1,
+.h1 {
+  font-size: $s4;
+}
+
+h2,
+.h2 {
+  font-size: $s3;
+}
+
+h3,
+.h3 {
+  font-size: $s2;
+}
+
+h4,
+.h4 {
+  font-size: $s1;
+}
+
+h5,
+.h5 {
+  font-size: $s-1;
+  font-weight: normal;
+}
+
+h6,
+.h6 {
+  font-size: $s-2;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 48em) {
+  h1,
+  .h1 {
+    font-size: $s3;
+  }
+
+  h2,
+  .h2 {
+    font-size: $s2;
+  }
+
+  h3,
+  .h3 {
+    font-size: $s1;
+  }
+
+  h4,
+  .h4 {
+    font-size: $s0;
+  }
+
+  h5,
+  .h5 {
+    font-size: $s-1;
+    font-weight: normal;
+  }
+
+  h6,
+  .h6 {
+    font-size: $s-2;
+    font-weight: normal;
+  }
+}
+
+p,
+.p {
+  font-size: $s0;
+}
+
+// Ionic icons default class
+.md {
+  color: $color-darkest;
+}
+
+img,
+.img {
+  max-width: 100%;
+}
