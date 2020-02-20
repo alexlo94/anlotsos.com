@@ -1,8 +1,33 @@
 // Utility classes as needed
+
+.display\:none {
+  display: none;
+}
+
 .text-align\:center {
   text-align: center;
 }
 
+.max-width\:measure {
+  max-width: $measure;
+}
+
 .justify-content\:center {
   justify-content: center;
+}
+
+.justify-content\:space-between {
+  justify-content: space-between;
+}
+
+.align-items\:flex-end {
+  align-items: flex-end;
+}
+
+.align-items\:baseline {
+  align-items: baseline;
+}
+
+.align-items\:center {
+  align-items: center;
 }

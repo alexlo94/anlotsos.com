@@ -1,0 +1,59 @@
+.navbar {
+  padding: $s-1 5vw;
+  background: $color-lightest;
+  color: $color-darkest;
+  position: sticky;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.3s ease-out;
+
+  .navlink {
+    font-family: $font-mono;
+    font-size: $s0;
+  }
+
+  .logo {
+    font-family: $font-mono;
+    font-size: $s1;
+  }
+}
+
+@media screen and (max-width: 42em) {
+  .navbar {
+    padding: $s0 5vw;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .navigation {
+    z-index: 11;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    margin: 0;
+    box-shadow: 0 -4px 8px rgba($color-darkest, 0.15);
+
+    & > * {
+      background: $color-darkest;
+      color: $color-lightest;
+      justify-content: space-between;
+      margin: 0;
+      padding: $s1 $s2;
+    }
+
+    .navlink {
+      font-size: $s-1;
+      font-weight: 500;
+      text-decoration: none;
+      margin: 0;
+
+      .pre {
+        display: none;
+      }
+    }
+  }
+}

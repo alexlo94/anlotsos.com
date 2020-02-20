@@ -2,6 +2,9 @@ const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
 
+const Button = require("./_includes/shortcodes/Button");
+const Image = require("./_includes/shortcodes/Image");
+
 module.exports = function (eleventyConfig) {
     // Output directory: _site
   
@@ -9,6 +12,12 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addNunjucksFilter("separate", function(list) {
       let listTransform = list.map(x => x.toLowerCase().replace(" ", "-"));
       return listTransform.join(" ");
+    });
+
+    //filter to remove an element from a list by value
+    eleventyConfig.addNunjucksFilter("removeVal", function(list, elt) {
+      let listTransform = list.filter(currElt => currElt !== elt);
+      return listTransform;
     });
   
     // Minify CSS
@@ -38,6 +47,29 @@ module.exports = function (eleventyConfig) {
       }
       return content;
     });
+
+    //Collections
+    eleventyConfig.addCollection("projectCategories", function(collection){
+    
+      const categories = new Set();
+      const projects = collection.getFilteredByTag("Projects");
+  
+      for(const project of projects) {
+        for(const tag of project.data.tags) {
+          categories.add(tag);
+        }
+      }
+  
+      categories.delete("Projects");
+      categories.delete("Pages");
+  
+      return Array.from(categories);
+  
+    });
+
+    //Shortcodes
+    eleventyConfig.addShortcode("Button", Button);
+    eleventyConfig.addShortcode("Image", Image);
   
     eleventyConfig.addPassthroughCopy("static/media/");
     eleventyConfig.addPassthroughCopy("_includes/assets/");

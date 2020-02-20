@@ -1,8 +1,12 @@
 .page-section {
   width: 100%;
   max-width: 1000px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: $s2 0;
+
+  &.cover {
+    min-height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }

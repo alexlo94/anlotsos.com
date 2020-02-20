@@ -28,11 +28,11 @@ $line-height-small: 0.8 * $ratio;
 
 // Set font, color, line height etc in root
 :root {
-  //line-height: $ratio;
   font-size: 1em;
   font-family: $font-sans-serif;
   background-color: $color-lightest;
   color: $color-darkest;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -114,4 +114,13 @@ p,
 img,
 .img {
   max-width: 100%;
+}
+
+a.inline {
+  color: $color-main;
+  text-decoration: underline;
+
+  &:visited {
+    color: $color-darker;
+  }
 }

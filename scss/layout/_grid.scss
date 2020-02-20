@@ -1,0 +1,10 @@
+.grid {
+  display: grid;
+  gap: $s0;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  & > * {
+    display: flex;
+    justify-content: stretch;
+  }
+}

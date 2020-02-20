@@ -1,0 +1,17 @@
+// blank
+.footer {
+  background-color: $color-darkest;
+  color: $color-lightest;
+  margin-top: $s5;
+  padding: $s2;
+
+  .md {
+    color: $color-lightest;
+  }
+}
+
+@media screen and (max-width: 42rem) {
+  .footer {
+    margin-bottom: $s2;
+  }
+}

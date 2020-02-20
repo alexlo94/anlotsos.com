@@ -1,0 +1,14 @@
+.filter {
+  font-family: $font-mono;
+  color: $color-darkest;
+  border: $color-darkest 2px solid;
+  border-radius: 1em;
+  padding: $s-5 $s0;
+  min-width: 10ch;
+  text-align: center;
+
+  &.active {
+    color: $color-lightest;
+    background: $color-darkest;
+  }
+}
