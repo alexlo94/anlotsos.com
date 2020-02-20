@@ -4,12 +4,13 @@
   transform: translate3d(25%, 0, 0);
   transition: opacity 1s, transform 1s;
 }
-[data-scroll]:nth-child(even) {
+
+[data-scroll]:nth-child(odd) {
   transform: translate3d(-25%, 0, 0);
 }
 
 [data-scroll="in"],
-[data-scroll="in"]:nth-child(even) {
+[data-scroll="in"]:nth-child(odd) {
   transform: translate3d(0, 0, 0);
   opacity: 1;
 }
