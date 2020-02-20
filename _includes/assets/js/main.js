@@ -71,6 +71,7 @@ function filterByTagList(tagsList) {
     }
 }
 
+/* Image Zoom and Modal */
 // Get all images in the current page and add zoom event handler
 const images = document.querySelectorAll(".frame.zoom");
 for(let image of images) {
@@ -83,6 +84,7 @@ const xIcon = modal.querySelector(".close");
 modal.addEventListener("click", closeModal);
 xIcon.addEventListener("click", closeModal);
 
+/* Filter List for work section */
 const activeFilters = [];
 const filters = document.querySelectorAll(".filter");
 
@@ -101,6 +103,7 @@ for (const filter of filters) {
     });
 }
 
+/* Sticky Navbar */
 let scrollY = window.pageYOffset;
 let currScrollY;
 const navbar = document.querySelector(".navbar");
@@ -111,7 +114,33 @@ window.addEventListener("scroll", function() {
     } else {
         navbar.style["boxShadow"] = "none";
     }
-    (scrollY > currScrollY) ? navbar.style.top = "0" : navbar.style.top = "-150px";
+    (scrollY > currScrollY) ? navbar.style.top = "0" : navbar.style.top = "-100%";
     scrollY = currScrollY;
 });
 
+/* Intersection Observer for scroll animations */
+// get all page sections
+const sections = document.querySelectorAll(".page-section");
+
+//define io options
+const options = {
+    rootMargin: '0px',
+    threshold: 0.2
+}
+
+//define io callback function
+const callback = function(entries, observer) {
+    for(let entry of entries) {
+        if(entry.isIntersecting) {
+            entry.target.dataset.scroll = "in";
+        }
+    }
+}
+
+// create new io object
+let observer = new IntersectionObserver(callback, options);
+
+//assign targets to it
+for (let section of sections) {
+    observer.observe(section);
+}

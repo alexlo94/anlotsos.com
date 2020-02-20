@@ -320,6 +320,7 @@ a.inline:visited {
 }
 
 .content-wrapper {
+  overflow: hidden;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -646,10 +647,33 @@ a.inline:visited {
 
 .fadeinup {
   -webkit-animation-name: fadeinup;
-  -webkit-animation: fadeinup 1.5s;
-          animation: fadeinup 1.5s;
+  -webkit-animation: fadeinup 1s;
+          animation: fadeinup 1s;
   -webkit-animation-delay: 100ms;
           animation-delay: 100ms;
+}
+
+[data-scroll] {
+  position: relative;
+  opacity: 0;
+  -webkit-transform: translate3d(25%, 0, 0);
+          transform: translate3d(25%, 0, 0);
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, transform 1s;
+  transition: opacity 1s, transform 1s, -webkit-transform 1s;
+}
+
+[data-scroll]:nth-child(even) {
+  -webkit-transform: translate3d(-25%, 0, 0);
+          transform: translate3d(-25%, 0, 0);
+}
+
+[data-scroll="in"],
+[data-scroll="in"]:nth-child(even) {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 
 .display\:none {

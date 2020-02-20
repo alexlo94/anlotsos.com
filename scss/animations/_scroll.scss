@@ -1,0 +1,15 @@
+[data-scroll] {
+  position: relative;
+  opacity: 0;
+  transform: translate3d(25%, 0, 0);
+  transition: opacity 1s, transform 1s;
+}
+[data-scroll]:nth-child(even) {
+  transform: translate3d(-25%, 0, 0);
+}
+
+[data-scroll="in"],
+[data-scroll="in"]:nth-child(even) {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
