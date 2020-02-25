@@ -8,9 +8,11 @@
   left: 0;
   right: 0;
   transition: top 0.3s ease-out;
+  overflow: visible;
 
   .navlink {
     font-family: $font-mono;
+    font-weight: 500;
     font-size: $s0;
   }
 
@@ -47,8 +49,8 @@
 
     .navlink {
       font-size: $s-1;
-      font-weight: 500;
       text-decoration: none;
+      font-weight: 500;
       margin: 0;
 
       .pre {

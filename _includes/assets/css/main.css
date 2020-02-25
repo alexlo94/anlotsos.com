@@ -366,10 +366,12 @@ a.inline:visited {
   right: 0;
   -webkit-transition: top 0.3s ease-out;
   transition: top 0.3s ease-out;
+  overflow: visible;
 }
 
 .navbar .navlink {
   font-family: "Roboto Mono", monospace;
+  font-weight: 500;
   font-size: 1rem;
 }
 
@@ -407,8 +409,8 @@ a.inline:visited {
   }
   .navigation .navlink {
     font-size: 0.66667rem;
-    font-weight: 500;
     text-decoration: none;
+    font-weight: 500;
     margin: 0;
   }
   .navigation .navlink .pre {
@@ -750,5 +752,9 @@ a.inline:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.overflow\:visible {
+  overflow: visible;
 }
 /*# sourceMappingURL=main.css.map */
