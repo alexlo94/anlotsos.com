@@ -6,8 +6,8 @@ module.exports = (src, alt, square = false, outline = false, zoom = true, lazy =
     if(lazy) {classVal += " lazyload"}
 
     return `
-        <div class="${ classVal }">
-            <img src="${ src }" alt="${ alt }">
-        </div>
+<div class="${ classVal }">
+  <img src="${ src }" alt="${ alt }">
+</div>
     `;
 }

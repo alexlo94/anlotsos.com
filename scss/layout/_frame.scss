@@ -11,6 +11,10 @@
 
     padding-bottom: calc(var(--n) / var(--d) * 100%);
   }
+
+  &.zoom {
+    cursor: pointer;
+  }
 }
 
 .frame > * {

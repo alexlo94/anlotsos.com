@@ -265,6 +265,11 @@ a.inline:visited {
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
+.grid.large {
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
 .grid > * {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -272,6 +277,13 @@ a.inline:visited {
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
+}
+
+@media screen and (max-width: 42em) {
+  .grid.large {
+    -ms-grid-columns: (minmax(280px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
 }
 
 .frame {
@@ -285,6 +297,10 @@ a.inline:visited {
   --n: 1;
   --d: 1;
   padding-bottom: calc(var(--n) / var(--d) * 100%);
+}
+
+.frame.zoom {
+  cursor: pointer;
 }
 
 .frame > * {
@@ -480,8 +496,8 @@ a.inline:visited {
 
 .image.outline:hover::after {
   content: "";
-  top: 8px;
-  left: 8px;
+  top: 4px;
+  left: 4px;
 }
 
 .image::before {
@@ -502,6 +518,18 @@ a.inline:visited {
 .image:hover::before {
   content: "";
   background-color: rgba(200, 44, 255, 0);
+}
+
+@media screen and (max-width: 42em) {
+  .image.outline::after {
+    border: 2px solid #c82cff;
+    top: 6px;
+    left: 6px;
+  }
+  .image.outline:hover::after {
+    top: 2px;
+    left: 2px;
+  }
 }
 
 .accent {
@@ -581,6 +609,12 @@ a.inline:visited {
 @media screen and (max-width: 42rem) {
   .footer {
     margin-bottom: 2.25rem;
+  }
+}
+
+@media screen and (max-width: 42em) {
+  .project-title {
+    font-size: 2.25rem;
   }
 }
 

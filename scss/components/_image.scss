@@ -22,8 +22,8 @@
     &:hover {
       &::after {
         content: "";
-        top: 8px;
-        left: 8px;
+        top: 4px;
+        left: 4px;
       }
     }
   }
@@ -46,6 +46,25 @@
     &::before {
       content: "";
       background-color: rgba($color-main, 0);
+    }
+  }
+}
+
+@media screen and (max-width: 42em) {
+  .image {
+    &.outline {
+      &::after {
+        border: 2px solid $color-main;
+        top: 6px;
+        left: 6px;
+      }
+
+      &:hover {
+        &::after {
+          top: 2px;
+          left: 2px;
+        }
+      }
     }
   }
 }

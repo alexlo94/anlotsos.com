@@ -1,0 +1,88 @@
+---
+layout: layouts/project.njk
+tags:
+  - Projects
+  - HTML
+  - (S)CSS
+  - Javascript
+  - 11ty
+title: Caseyjudge.com
+description: Portfolio website for Casey Judge, creative technologist and digital designer. Custom-built, fully responsive, and highly performant so that recruiters and hiring managers can get the information they need as soon as possible on any platform.
+thumbnailSrc: "/static/media/caseyjudge_0.png"
+thumbnailAlt: "Snapshot of the above-the-fold section of Casey Judge's website."
+cta:
+  text: "Read More"
+  href: "/projects/caseyjudge.com"
+links:
+  - iconName: logo-github
+    href: https://github.com/alexlo94/acaciajudge.com-
+  - iconName: open
+    href: https://www.caseyjudge.com
+---
+<div class="stack s0">
+  <h1 class="project-title">{{ title }}</h1>
+  <div class="cluster">
+    <div class="wrapper">
+      {%- for link in links -%}
+        <a href="{{ link.href }}">
+          <ion-icon name="{{ link.iconName }}" size="large"></ion-icon>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% Image thumbnailSrc, thumbnailAlt, false, true %}
+
+<div class="stack s0">
+  <h2>Description</h2>
+  <p>Portfolio website for Casey Judge, creative technologist and digital designer. Custom-built, fully responsive, and
+    highly performant so that recruiters and hiring managers can get the information they need as soon as possible on
+    any platform.</p>
+</div>
+
+<div class="stack s0">
+  <h2>The Problem</h2>
+  <p>Casey is a creative professional with an extremely wide skill set and a very diverse portfolio with projects that
+    fall into quite a few different categories ranging from 3D modeling to physical computing. She relies on her
+    portfolio to showcase her work, find contract work, and apply to full-time positions.</p>
+  <p>She had previously used site builders like Squarespace and Wix to build her portfolio and admitted that she enjoyed
+    their WYSIWYG functionality. She found it easy to edit her portfolio entries using their rich text editors and
+    drag-and-drop interfaces and It was easy, fast, and straightforward to add a new entry to her portfolio whenever she
+    needed to.</p>
+  <p>However, she found their templates oftentimes too limiting and site performance was generally very low, with images
+    taking up to a few seconds to load at a time. A lot of her time was spent optimizing and resizing assets rather than
+    writing her content, and she realized very quickly that the tradeoff between convenience and performance was too
+    large for her to handle. There were multiple occasions where Casey had to blame the wifi during a meeting with a
+    prospective client because her website load times were just that bad.</p>
+  <div class="grid large">
+      {% Image "/static/media/caseyjudge_1.png", "Lighthouse report for acaciajudge.com showing a performance score of 16", false, true %}
+      {% Image "/static/media/caseyjudge_4.png", "Screenshot of acaciajudge.com", false, true %}
+  </div>
+</div>
+
+<div class="stack s0">
+  <h2>The Solution</h2>
+  <p>Based on her recent experiences, Casey is a prime candidate for a portfolio website built using the JAM stack and a
+    static site generator like 11ty. Using Netlify CMS, we can maintain the convenience of a WYSIWYG editor that she
+    enjoyed so much and still let her update her portfolio at her convenience, and without making her delve into the
+    source code or committing to GitHub.</p>
+  <p>Her new website also features a tag system that can be used to organize her very diverse portfolio. When Casey adds
+    a new project to her portfolio she can choose to add tags to it that help describe the kind of work she did (i.e. 3D
+    Modeling, UX Design, etc.). Users of her site are then be able to use the site's navigation to quickly find the work
+    that is relevant to them.</p>
+  <div class="grid large">
+    {% Image "/static/media/caseyjudge_3.gif", "Demo of the filter system for acaciajudge.com", false, true %}
+  </div>
+</div>
+
+<div class="stack s0">
+  <h2>The Result</h2>
+  <p>Overall, the website is now much faster, scoring a near-perfect 98/100 on Google Lighthouse audits while still
+    maintaining the convenience of a WYSIWYG because of Netlify CMS. Pre-rendering HTML and serving it from a CDN, using
+    Netlify's large asset optimization during the site's build phase, and implementing lazy loading for images helped
+    keep her file sizes low and her page-load times even lower.</p>
+  <div class="grid large">
+    {% Image "/static/media/caseyjudge_2.png", "Demo of the filter system for acaciajudge.com", false, true %}
+  </div>
+</div>

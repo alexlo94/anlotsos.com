@@ -4,8 +4,8 @@ module.exports = (text="Button", href="#", outline=false, small=false) => {
     if(small){classVal += " small"}
 
     return `
-        <a href="${ href }" class="${ classVal }">
-            ${ text }
-        </a>
+<a href="${ href }" class="${ classVal }">
+  ${ text }
+</a>
     `;
 }
