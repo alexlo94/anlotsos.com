@@ -35,6 +35,11 @@ $line-height-small: 0.8 * $ratio;
   scroll-behavior: smooth;
 }
 
+// font antialiasing
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
 h1,
 .h1 {
   font-size: $s4;
@@ -103,7 +108,7 @@ h6,
 
 p,
 .p {
-  font-size: $s0;
+  font-size: $s0 * 1.1;
 }
 
 // Ionic icons default class

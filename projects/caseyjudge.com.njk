@@ -10,38 +10,24 @@ title: Caseyjudge.com
 description: Portfolio website for Casey Judge, creative technologist and digital designer. Custom-built, fully responsive, and highly performant so that recruiters and hiring managers can get the information they need as soon as possible on any platform.
 thumbnailSrc: "/static/media/caseyjudge_0.png"
 thumbnailAlt: "Snapshot of the above-the-fold section of Casey Judge's website."
-cta:
-  text: "Read More"
-  href: "/projects/caseyjudge.com"
 links:
   - iconName: logo-github
     href: https://github.com/alexlo94/acaciajudge.com-
   - iconName: open
     href: https://www.caseyjudge.com
 ---
-<div class="stack s0">
-  <h1 class="project-title">{{ title }}</h1>
-  <div class="cluster">
-    <div class="wrapper">
-      {%- for link in links -%}
-        <a href="{{ link.href }}">
-          <ion-icon name="{{ link.iconName }}" size="large"></ion-icon>
-        </a>
-      {%- endfor -%}
-    </div>
-  </div>
-</div>
+{% include "components/project-title.njk" %}
 
 {% Image thumbnailSrc, thumbnailAlt, false, true %}
 
-<div class="stack s0">
+<div class="stack s1">
   <h2>Description</h2>
   <p>Portfolio website for Casey Judge, creative technologist and digital designer. Custom-built, fully responsive, and
     highly performant so that recruiters and hiring managers can get the information they need as soon as possible on
     any platform.</p>
 </div>
 
-<div class="stack s0">
+<div class="stack s1">
   <h2>The Problem</h2>
   <p>Casey is a creative professional with an extremely wide skill set and a very diverse portfolio with projects that
     fall into quite a few different categories ranging from 3D modeling to physical computing. She relies on her
@@ -61,7 +47,7 @@ links:
   </div>
 </div>
 
-<div class="stack s0">
+<div class="stack s1">
   <h2>The Solution</h2>
   <p>Based on her recent experiences, Casey is a prime candidate for a portfolio website built using the JAM stack and a
     static site generator like 11ty. Using Netlify CMS, we can maintain the convenience of a WYSIWYG editor that she
@@ -76,7 +62,7 @@ links:
   </div>
 </div>
 
-<div class="stack s0">
+<div class="stack s1">
   <h2>The Result</h2>
   <p>Overall, the website is now much faster, scoring a near-perfect 98/100 on Google Lighthouse audits while still
     maintaining the convenience of a WYSIWYG because of Netlify CMS. Pre-rendering HTML and serving it from a CDN, using

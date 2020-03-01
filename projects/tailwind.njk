@@ -1,0 +1,77 @@
+---
+    layout: layouts/project.njk
+    tags:
+      - Projects
+      - C#
+      - Unity3D
+    title: Tailwind
+    description: A 3D puzzle platformer meant to help teachers cover the basics of vector mathematics. It takes an alternative approach to game-based learning, opting for good gameplay that sets the stage for an enhanced classroom experience.
+    thumbnailSrc: "/static/media/tailwind_0.png"
+    thumbnailAlt: "Tailwind intro screen with the tagline play now."
+    links:
+      - iconName: logo-github
+        href: https://github.com/alexlo94/tailwind
+      - iconName: open
+        href: /_includes/assets/docs/Lotsos_Thesis_Spring-2018_Public.pdf
+      
+---
+
+{% include "components/project-title.njk" %}
+
+{% Image thumbnailSrc, thumbnailAlt, false, true %}
+
+<div class="stack s1">
+  <h2>Description</h2>
+  <p>Tailwind is a 3D puzzle platformer, built with the Unity3D game engine, meant to help math and physics teachers
+    cover the basics of vector mathematics. The player assumes control of a capsule character (affectionately dubbed as
+    “Captain Capsule” by testers of the game) with the objective of traversing several different levels while collecting
+    as many orb collectibles as possible. Players can run, jump and glide their way through the levels while interacting
+    with the game’s wind system which can either help or hinder their movement when gliding. Each level has a designated
+    goal that the player can cross once they’ve collected enough of the orbs that are present in the level.</p>
+  <div class="grid">
+    {% Image "/static/media/tailwind_3.png", "alt", false, true %}
+    {% Image "/static/media/tailwind_1.png", "alt", false, true %}
+    {% Image "/static/media/tailwind_4.png", "alt", false, true %}
+  </div>
+</div>
+
+<div class="stack s1">
+  <h2>The Problem</h2>
+  <p>There is ample research proving that educational games are effective in classroom environment and surveys show that
+    teachers <em>believe</em> that games are effective and are willing to use them in their classrooms when possible (<a
+      class="inline" href="https://www.joanganzcooneycenter.org/wp-content/uploads/2014/10/jgcc_leveluplearning_final.pdf">source</a>).
+    Unfortunately, surveys also show that many teachers are often unsure about <em>how</em> to use games in their
+    classroom or
+    find it difficult to use them because of barriers such as cost or lack of time (<a class="inline" href="http://gamesandlearning.umich.edu/wp-content/uploads/2014/11/A-GAMES-Part-I_A-National-Survey.pdf">source</a>).
+  </p>
+  <p>Judging from prior research and the data presented above, it is clear that games are effective learning devices,
+    and educators are aware of this but educational games often clash with the procedures found in a traditional
+    classroom environment.</p>
+</div>
+
+<div class="stack s1">
+  <h2>The Solution</h2>
+  <p>Using existing research (Gee's Good Videogames and Good Learning), I set out to create an effective educational
+    game with Unity and C# and added features like a replay system and smart annotations that would help teachers
+    introduce the game to their classrooms.</p>
+  <div class="grid large">
+    {% Image "/static/media/tailwind_5.png", "Tailwind replay UI", false, true %}
+    {% Image "/static/media/tailwind_6.png", "Tailwind replay UI", false, true %}
+  </div>
+  <p>Following this, I tested the game with students and teachers to make sure that it was an effective learning
+    experience and asked them to assess it using the RETAIN framework. In a separate testing session, I interviewed
+    learners and students to assess the efficacy of the extra features added to make the game usable in the classroom.
+  </p>
+</div>
+
+<div class="stack s1">
+  <h2>The Result</h2>
+  <p>In the first test, a combination of about 20 students and teachers played the game for about 30' each and then
+    assigned their Retain score, with Tailwind averaging a score of 34/63 among all test participants. For reference, a
+    game like Math Blaster! has previously received an 18 on the RETAIN scale, while Where in the World is Carmen
+    Sandiego received a score of 41 by the creators of the framework.</p>
+  <p>The second test was performed with about 15 more students and educators in a live classroom environment which was
+    facilitated by Tech Kids Unlimited. Following brief play sessions, participants were interviewed and provided
+    qualitative feedback on the game and its classroom features. According to testers, Tailwind was an effective and
+    enjoyable educational experience that they felt had a place in their classroom. </p>
+</div>

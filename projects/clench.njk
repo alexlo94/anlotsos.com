@@ -1,0 +1,70 @@
+---
+    layout: layouts/project.njk
+    tags:
+      - Projects
+      - C#
+      - Unity3D
+      - Arduino
+    title: Clench!
+    description: An arcade-style, multiplayer, competitive bodybuilding game powered by Arduino and Unity. Get pumped, strike a pose, and CLENCH as hard as you can!
+    thumbnailSrc: "/static/media/clench_0.png"
+    thumbnailAlt: "Clench intro screen featuring a bodybuilder and the word Clench! in cyrillic text."
+    links:
+      - iconName: logo-github
+        href: https://github.com/alexlo94
+---
+
+{% include "components/project-title.njk" %}
+
+{% Image thumbnailSrc, thumbnailAlt, false, true %}
+
+<div class="stack s1">
+  <h2>Description</h2>
+  <p>Two players go head to head in a bodybuilding competition as they attempt to recreate a variety of different poses
+    with both players’ performance being captured via webcam and projected to a big screen for spectators to watch. The
+    game begins when both players have made their entrance by stepping on their respective pads and grabbing their
+    controllers. The game will suggest random poses successively for 30 seconds each and start displaying each player’s
+    camera feed. The harder each player clenches on a given pose, the larger their camera feed will be on the screen and
+    ultimately, the crowd and judges decide a winner after three poses.</p>
+    <div class="grid large">
+      {% Image "/static/media/clench_1.jpg", "Clench Game UI", false, true %}
+      {% Image "/static/media/clench_4.png", "Two game testers playing Clench", false, true %}
+    </div>
+</div>
+
+<div class="stack s1">
+  <h2>Motivation</h2>
+  <p>Clench was the final project for one of my graduate classes, "Beyond the Joystick", where the objective was to
+    explore the world of alternative videogame controllers, understand their influence on a player's experience, and
+    learn how they can be designed and built effectively.</p>
+  <p>Clench aimed to explore the social aspects of gaming and how alternative controllers can bring players out of their
+    comfort zone, while still helping them achieve total immersion. The idea was to let players act out the excessively
+    awesome spectacle found in bodybuilding competitions through means that were inspired by over-the-top Japanese
+    arcade cabinets featuring wild skeuomorphic controllers.</p>
+</div>
+
+<div class="stack s1">
+  <h2>How we Built it</h2>
+  <p>Clench was built using Unity to create the software and Arduinos to create the controllers. The game receives input
+    from the controllers via serial communication where each packet of information represents how intensely the player
+    is squeezing at any given moment and whether they're on the mat so that their pose is registered. It also collects
+    data from two webcams whose feeds are mapped onto the game UI using Unity's Render Textures.</p>
+  <p>As seen in the following figure, the Arduino collects data from custom-made bend sensors found in each part of the
+    controller (C1, C2, and M). Along with the webcam pixel data (W), this data is transmitted via serial communication
+    to the Unity file where it is mapped to the size of the player's camera feed.</p>
+
+    {% Image "/static/media/clench_diagram.jpg", "Schematic of Clench", false, false %}
+</div>
+
+<div class="stack s1">
+  <h2>The Controllers</h2>
+  <p>It should be noted that the controllers were fully custom-made for Clench using everyday materials and digital
+    fabrication methods. The pill controllers (C1 and C2) are plastic foam pills with Velostat embedded in their core so
+    that they can collect analog pressure data while the player is squeezing them and the mat is lined with Piezo
+    elements so that it can detect whether the player has stepped onto it. For a cosmetic touch, the wooden mats have
+    been engraved with the words "PLAYER 1" and "PLAYER 2" using a laser cutter found in the NYU Makerspace.</p>
+
+    <div class="grid large">
+      {% Image "/static/media/clench_3.jpeg", "Clench Controllers", false, true %}
+    </div>
+</div>

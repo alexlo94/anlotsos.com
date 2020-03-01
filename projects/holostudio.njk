@@ -1,0 +1,97 @@
+---
+  layout: layouts/project.njk
+  tags:
+    - Projects
+    - C#
+    - Unity3D
+  title: The Holostudio
+  description: A holographic art studio application developed for one of Microsoft’s UX design challenges. Built for the HoloLens using Unity3D.
+  thumbnailSrc: "/static/media/holostudio_0.jpeg"
+  thumbnailAlt: "Team Hellolens Logo"
+  links:
+    - iconName: logo-github
+      href: https://github.com/alexlo94/HoloStudio
+    - iconName: open
+      href: /_includes/assets/docs/Lotsos_HellolensBook_Public.pdf
+---
+
+{% include "components/project-title.njk" %}
+{% Image thumbnailSrc, thumbnailAlt, false, true %}
+
+<div class="stack s1">
+    <h2>Description</h2>
+    <p>Imagine a holographic portfolio that enables you to experience and sense art works in a new and exciting way. As
+        a part of one of Microsoft’s UX design challenges, our team was tasked with designing a proof of concept for a
+        holographic portfolio that covers the end-to-end experience of an artist’s portfolio, deployed and viewed
+        through the HoloLens.</p>
+    <div class="grid">
+        {% Image "/static/media/holostudio_1.png", "Render of a person about to enter the Holostudio", false, true %}
+        {% Image "/static/media/holostudio_2.png", "Render of a person interacting with a sculpture in the Holostudio", false, true %}
+        {% Image "/static/media/holostudio_3.png", "Render of a person watching a video in the Holostudio. Controls are visible under the video", false, true %}
+    </div>
+</div>
+
+<div class="stack s1">
+    <h2>The Design Challenge</h2>
+    <p>We were challenged to create an experience where users interacted with different types of artwork in a mixed
+        reality environment. The types of work we needed to consider included a painting (static 2D art), a video
+        (dynamic 2D art), a sculpture (static 3D art), and an interactive installation (dynamic 3D art).</p>
+
+    <div class="cluster">
+        <div class="wrapper">
+            {%Button "Read the full brief", "https://docs.google.com/document/d/1tuEfNFk--lAczBB83teo3HevUsln1kfD1WmLVvtquWk/edit?usp=sharing" %}
+        </div>
+    </div>
+</div>
+
+<div class="stack s1">
+    <h2>Initial Prototyping</h2>
+    <p>The simplest way to tackle the design challenge was for our users to enter an artist's studio from a list of choices. After users had entered the studio, the Hololens would use surface detection to place the 4 art pieces in different locations around the user. The user would then be free to walk around in the studio and appreciate the art pieces as they see fit, having access to information and manipulation controls for each piece from tool belts that would appear below them.</p>
+    <p>Our initial prototyping steps revolved around bodystorming and cardboard prototyping since we wanted to make sure that our planned interactions were viable before moving onto a digital prototype.</p>
+    <div class="grid">
+        {% Image "/static/media/holostudio_4.png", "Person simulating a Holostudio experience with a cardboard frame as the viewport and plastic rod as the pointer", false, true %}
+        {% Image "/static/media/holostudio_5.png", "Person simulating viewing a painting in the Holostudio, view from the back", false, true %}
+        {% Image "/static/media/holostudio_6.png", "Person simulating viewing a painting in the Holostudio, view from the front", false, true %}
+    </div>
+</div>
+
+<div class="stack s1">
+    <h2>Testing Results</h2>
+    <p>In early prototypes, we resorted to large amounts of billboarding text to convey informations about the different
+        art pieces which users deemed tedious. Users also indicated that they had trouble orienting themselves once they
+        had entered the studio, and had a tough time finding things in mixed reality because of the overlap of physical
+        and digital information. While this problem was partly attributed to the Hololens' relatively small viewport, it
+        was still one we wanted to tackle. Finally, users indicated that they had trouble with the Hololens gesture
+        controls altogether, stating that the main "Point and Airtap" gesture was very uncomfortable for a long-form
+        experience such as ours and getting to the information about the art pieces was even physically taxing for some
+        users.</p>
+</div>
+
+<div class="stack s1">
+    <h2>Iteration: Our Solution</h2>
+    <p>Our solution to the problems outlined above was to create a virtual assistant named ArtDroid-82 or “Arty” to
+        guide users through the artist’s studio. Arty ended up being the central point of contact in our experience and
+        was designed to be similar to a docent and the approach was based on the experience of a real-life studio visit.
+        Most notably, Arty would respond to voice commands, thus presenting an alternative method of input to the
+        Hololens' gesture controls.</p>
+    <div class="grid">
+        {% Image "/static/media/holostudio_7.png", "Person simulating a Holostudio experience with a cardboard frame as the viewport and plastic rod as the pointer", false, true %}
+        {% Image "/static/media/holostudio_8.jpg", "Person simulating viewing a painting in the Holostudio, view from the back", false, true %}
+        {% Image "/static/media/holostudio_9.png", "Person simulating viewing a painting in the Holostudio, view from the front", false, true %}
+    </div>
+    <p>Upon entering the studio, Arty would greet the user and give them the option for a guided tour. If the user
+        selected this option, Arty would then walk the user through the studio, telling them about each art piece. If
+        the user declined Arty's tour option, or they had already finished the tour, they could interact with Arty by
+        saying "Hey Arty" followed by a voice command such as "Tell me more about this painting" or "Scale this painting
+        up to twice it's size".</p>
+</div>
+
+<div class="stack s1">
+    <h2>The Report</h2>
+    <p>Our team went through the full extent of the UX process and produced a detailed report regarding our explorations
+        of UX design in Mixed Reality.</p>
+    <div class="cluster">
+        <div class="wrapper">
+            {% Button "Read the Full Report", "/_includes/assets/docs/Lotsos_HellolensBook_Public.pdf" %}</div>
+    </div>
+</div>
