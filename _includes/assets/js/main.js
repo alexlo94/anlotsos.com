@@ -125,7 +125,7 @@ const sections = document.querySelectorAll(".page-section");
 //define io options
 const options = {
     rootMargin: '0px',
-    threshold: 0.3
+    threshold: 0.1
 }
 
 //define io callback function
