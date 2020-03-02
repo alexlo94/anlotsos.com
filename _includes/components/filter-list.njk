@@ -1,0 +1,8 @@
+<div class="cluster">
+    <div class="wrapper">
+            <h3>Filters:</h3>
+            {% for category in collections.projectCategories %}
+                <a href="#" class="filter" data-filter="{{ category }}">{{ category }}</a>
+            {% endfor %}
+    </div>
+</div>

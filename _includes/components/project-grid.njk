@@ -1,0 +1,30 @@
+<div class="grid">
+    {%- for Project in collections.Projects -%}
+    <div>
+        <article class="card stack s1 justify-content:space-between" data-tags="{{ Project.data.tags | separate }}">
+            <div class="card-header stack">
+                <div class="frame image">
+                    <img class="lazyload" src="{{ Project.data.thumbnailSrc }}" alt="{{ Project.data.thumbnailAlt }}">
+                </div>
+                <div class="title stack s-3">
+                    <h4>{{ Project.data.title }}</h4>
+                    <span class="tags">{{ Project.data.tags | removeVal("Projects") | string | replace(",", " ") }}</span>
+                </div>
+                <p class="description">{{ Project.data.description }}</p>
+            </div>
+            <div class="card-footer cluster">
+                <div class="wrapper justify-content:space-between">
+                    <a class="inline" href="{{ Project.url }}">Read More</a>
+                    <div class="cluster s-1">
+                        <div class="wrapper">
+                            {%- for link in Project.data.links -%}
+                                <a class="" href="{{ link.href }}"><ion-icon name="{{ link.iconName }}" size="large"></ion-icon></a>
+                            {%- endfor -%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    {%- endfor -%}
+</div>

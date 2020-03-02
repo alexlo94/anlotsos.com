@@ -1,0 +1,12 @@
+<div class="stack s0">
+  <h1 class="project-title">{{ title }}</h1>
+  <div class="cluster">
+    <div class="wrapper">
+      {%- for link in links -%}
+        <a href="{{ link.href }}">
+          <ion-icon name="{{ link.iconName }}" size="large"></ion-icon>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.button {
+  min-width: 12.5em;
+  padding: 1em 1em;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 500;
+  background: $color-darkest;
+  color: $color-lightest;
+  box-shadow: 2px 2px 4px rgba($color-darkest, 0.1);
+  transition: box-shadow 1s;
+
+  &.outline {
+    background: rgba($color-darkest, 0);
+    color: $color-darkest;
+    border: 2px $color-darkest solid;
+  }
+
+  &.small {
+    min-width: 6em;
+    padding: 0.5em 1em;
+    font-weight: 400;
+  }
+}

@@ -28,11 +28,15 @@ $line-height-small: 0.8 * $ratio;
 
 // Set font, color, line height etc in root
 :root {
-  //line-height: $ratio;
   font-size: 1em;
   font-family: $font-sans-serif;
   background-color: $color-lightest;
   color: $color-darkest;
+}
+
+// font antialiasing
+body {
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -103,7 +107,7 @@ h6,
 
 p,
 .p {
-  font-size: $s0;
+  font-size: $s0 * 1.1;
 }
 
 // Ionic icons default class
@@ -114,4 +118,13 @@ p,
 img,
 .img {
   max-width: 100%;
+}
+
+a.inline {
+  color: $color-main;
+  text-decoration: underline;
+
+  &:visited {
+    color: $color-darker;
+  }
 }

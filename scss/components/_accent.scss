@@ -1,0 +1,15 @@
+.accent {
+  position: relative;
+  color: $color-darker;
+  font-family: $font-mono;
+
+  &.pre {
+    padding-left: 2ch;
+
+    &::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+    }
+  }
+}

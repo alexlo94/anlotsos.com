@@ -1,0 +1,30 @@
+.modal {
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  background-color: rgba($color-darkest, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .close {
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+    background: transparent;
+    cursor: pointer;
+
+    .md {
+      color: $color-lightest;
+    }
+  }
+
+  .image-container {
+    background: transparent;
+    width: 80vw;
+  }
+}

@@ -1,0 +1,90 @@
+---
+layout: layouts/project.njk
+tags:
+  - Projects
+  - Javascript
+  - Node.js
+  - WebXR
+title: "MISSING: Angelica Greenstone"
+description: "Earn your rank in the Department of Strategic Forensics by tackling this high tech missing persons case and discovering the truth behind the dissapearance of Angelica Greenstone: a travel writer and social media personality who's vanished without a trace.  Do you have what it takes?"
+thumbnailSrc: "/static/media/dsf_logo.svg"
+thumbnailAlt: "Department of strategic forensics logo"
+links:
+  - iconName: open
+    href: /_includes/assets/docs/dsf_onboarding-public.pdf
+---
+
+{% include "components/project-title.njk" %}
+{% Image thumbnailSrc, thumbnailAlt, false, true %}
+
+<div class="stack s1">
+    <h2>Description</h2>
+    <p>Developed for the Microsoft 2019 Halloween Play event, the case of Angelica Greenstone is a short Alternate
+        Reality Game (ARG) that incorporates ciphers, riddles, social media, websites, texting, and augmented reality to
+        facilitate gameplay and deliver a compelling narrative. It is a scaled-down, demo version of an unreleased
+        Unseen Media project, The Coffee Shop Mystery.</p>
+    <div class="grid">
+        {% Image "/static/media/greenstone_1.jpg", "Halloween play testing", false, true %}
+        {% Image "/static/media/greenstone_2.jpg", "Halloween play booth from Unseen Media", false, true %}
+        {% Image "/static/media/greenstone_3.jpg", "Halloween play banner from Unseen Media", false, true %}
+    </div>
+    <p>Players of the game assume the role of trainee agents for the Department of Strategic Forensics (DSF) and
+        participate in a training exercise set up by the department to test their abilities. Starting from a simple
+        letter containing an encoded message, players must find the whereabouts of Angelica Greenstone, a travel writer,
+        and social media personality who's vanished without a trace.</p>
+</div>
+
+<div class="stack s1">
+    <h2>Try it Out</h2>
+    <p>The game has been live since October 2019 and is currently playable. I encourage you to try it out before reading
+        the next sections to see how it works as there are spoilers!</p>
+    <p>To play the game you will need a mobile device that has internet access, a camera, and the ability to send and
+        receive SMS messages (iPhone 5+/ Galaxy S6+ preferred). You will also need a printer that will be used to print
+        the <a class="inline" href="/_includes/assets/docs/dsf_onboarding-public.pdf">DSF letter<a/> that starts the experience and the <a class="inline" href="/static/media/dsf_frame.png">authorized communications template</a> that ends
+            the experience. Technically, the letter is optional to print but it helps to have it printed. You will be
+            placing a message within the authorized communications template so you'll also need two pens/markers: a
+            black one and a red one.</p>
+    <p>To start the game, decode the message hidden in the introductory <a class="inline" href="/_includes/assets/docs/dsf_onboarding-public.pdf">DSF Letter</a> and you're good to go! If you
+        don't want to try the game, are stuck and you need a hint, or you just want to know how the game works, read on
+        to the next section.</p>
+    <div class="cluster">
+        <div class="wrapper">
+            {% Button "Start the Game!", "/_includes/assets/docs/dsf_onboarding-public.pdf" %}
+        </div>
+    </div>
+</div>
+
+<div class="stack s1">
+    <h2>How it Works. Spoilers Ahead ⚠️</h2>
+    <div class="stack s1">
+        <p>Players are initially provided with a letter and an "Authorized Communications template". The letter contains
+            a
+            hidden message that the players need to decode by taking note of the intentional typos in sequential order.
+            The
+            message is "Instagram greenstonetravel".</p>
+        <p>Once players go to the @greenstonetravel account on Instagram, they go through the picures to discover
+            scrambled
+            messages. Players should use the clues scattered around the instagram profile to decode the messages. In
+            total,
+            there are three hidden messages on Instagram that can be decoded using the Caesar Shift cypher whose key is
+            found in the profile's bio. The messages are "“On the website, find me on the object with hands but no arms
+            and
+            a face but no eyes”, "I need to know about Australia" and "You are here because of Brazil".</p>
+        <p>Players can then navigate to <a class="inline"
+                href="https://www.whatsinthis.city">https://www.whatsinthis.city</a> , the website mentioned in
+            Angelica's bio. Using the
+            first decoded riddle, players should find that a picture of Big Ben has a clickable element on the clock
+            face.
+            After clicking on Big Ben, players can input the solution of the second riddle, "Brazil", and they're given
+            a
+            phone number to text.</p>
+        <p>After texting the phone number, players need to text the third and final riddle answer, "Australia", to
+            unlock
+            the webAR part of the experience and complete the training excercise. To complete the last part of the
+            experience, players must solve a drawing puzzle, the solution of which needs to be placed within the
+            "Authorized
+            Communication" template and scanned with the webAR utility. Once that's done, they'll receive the final
+            keyword:
+            "Greece" which, when texted to Angelica will end the experience.</p>
+    </div>
+</div>

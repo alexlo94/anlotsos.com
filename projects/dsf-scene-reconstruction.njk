@@ -1,0 +1,56 @@
+---
+layout: layouts/project.njk
+tags:
+  - Projects
+  - WebXR
+  - Javascript
+title: DSF Scene Reconstruction
+description: WebXR tool built with A-frame and 8th Wall that simulates reconstructing a crime-scene from photographic evidence. Developed for The Coffeeshop Mystery, an unreleased Unseen Media project. 
+thumbnailSrc: "/static/media/dsf_logo.svg"
+thumbnailAlt: "Logo of the department of strategic forensics"
+links:
+  - iconName: logo-github
+    href: https://github.com/unseenAlex/CrimeSceneReconstruction
+  - iconName: open
+    href: https://alexlo94.github.io/CrimeSceneReconstruction/
+---
+
+{% include "components/project-title.njk" %}
+
+{% Image thumbnailSrc, thumbnailAlt, false, true %}
+
+<div class="stack s1">
+    <h2>Description</h2>
+    <p>The DSF Scene Reconstructor was a webXR tool built with A-frame, 8th Wall, and Javascript that simulated
+        reconstructing a crime scene from photographic evidence. It was part of an unreleased Unseen Media game titled
+        The Coffeeshop Mystery. Within the game universe, the scene reconstruction utility was an investigative tool
+        used by the agents of a fictional organization, the Department of Strategic Forensics (DSF), to remotely
+        investigate crime scenes using augmented reality.</p>
+</div>
+
+<div class="stack s1">
+    <h2>How it Works</h2>
+    <p>To use the Scene Reconstructor, players would first have to obtain images (digital or physical) of the crime scene they were trying to reconstruct. Most often, these images were provided to players in physical form as a part of the game, or they would find them online while solving other puzzles.</p>
+    <p>Once enough photographic evidence of a crime scene had been collected, the players would use the utility to scan the pictures. The utility reconstructs a 3D model based on the photos scanned and the uses SLAM to place it on a surface of the user's choice.</p>
+    <div class="grid">
+        {% Image "/static/media/reconstruction_1.jpg", "Scene reconstruction utility scanning a picture", true, true %}
+        {% Image "/static/media/reconstruction_2.jpg", "Scene reconstruction utility tap to place prompt", true, true %}
+        {% Image "/static/media/reconstruction_3.jpg", "Scene reconstruction utility with the scene placed", true, true %}
+    </div>
+</div>
+
+<div class="stack s1">
+    <h2>Try a Demo</h2>
+    <p>I've gone ahead and set up a quick demo with some stock photos that you can use to test out the functionality of the utility. If you're on a mobile device click the button below to navigate to the utility.</p>
+    <div class="cluster">
+        <div class="wrapper">
+            {% Button "Try it Out!", "#" %}
+        </div>
+    </div>
+    <p>Once you have it open on your mobile device scan the images below to start the experience.</p>
+    <div class="grid">
+        {% Image "/static/media/reconstruction_4.jpeg", "Stock photo of a coffee shop", true, true %}
+        {% Image "/static/media/reconstruction_5.jpeg", "Stock photo of a coffee shop", true, true %}
+        {% Image "/static/media/reconstruction_6.jpeg", "Stock photo of a coffee shop", true, true %}
+    </div>
+</div>
