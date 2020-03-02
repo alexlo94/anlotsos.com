@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::before,
 ::after {
@@ -243,6 +244,11 @@ a.inline:visited {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: calc((var(--space) / 2) * -1);
+}
+
+.switcher > *.small {
+  --space: 1rem;
+  --threshold: 21em;
 }
 
 .switcher > * > * {
@@ -540,8 +546,19 @@ a.inline:visited {
 }
 
 .accent {
+  position: relative;
   color: #8d3fa9;
   font-family: "Roboto Mono", monospace;
+}
+
+.accent.pre {
+  padding-left: 2ch;
+}
+
+.accent.pre::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
 }
 
 .button {
@@ -761,5 +778,34 @@ a.inline:visited {
 
 .overflow\:visible {
   overflow: visible;
+}
+
+@media (any-hover: hover) {
+  .blurred {
+    position: relative;
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+    -webkit-transition: -webkit-filter 0.5s linear;
+    transition: -webkit-filter 0.5s linear;
+    transition: filter 0.5s linear;
+    transition: filter 0.5s linear, -webkit-filter 0.5s linear;
+  }
+  .blurred:hover {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transition: -webkit-filter 0.5s linear;
+    transition: -webkit-filter 0.5s linear;
+    transition: filter 0.5s linear;
+    transition: filter 0.5s linear, -webkit-filter 0.5s linear;
+  }
+  .blurred::before {
+    z-index: 15;
+    content: "Hover to reveal";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -5,6 +5,11 @@
   display: flex;
   flex-wrap: wrap;
   margin: calc((var(--space) / 2) * -1);
+
+  &.small {
+    --space: #{$s0};
+    --threshold: 21em;
+  }
 }
 
 .switcher > * > * {
