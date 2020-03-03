@@ -678,60 +678,33 @@ a.inline:visited {
           animation-delay: attr(data-animation-delay);
 }
 
-@-webkit-keyframes fadeinup {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fadeinup {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeinup {
-  -webkit-animation-name: fadeinup;
-  -webkit-animation: fadeinup 1s;
-          animation: fadeinup 1s;
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
-}
-
 [data-scroll] {
   position: relative;
+}
+
+[data-scroll].fadeinup {
   opacity: 0;
-  -webkit-transform: translate3d(25%, 0, 0);
-          transform: translate3d(25%, 0, 0);
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, transform 1s;
-  transition: opacity 1s, transform 1s, -webkit-transform 1s;
+  -webkit-transform: translate3d(0, 20px, 0);
+          transform: translate3d(0, 20px, 0);
+  -webkit-transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }
 
-[data-scroll]:nth-child(odd) {
-  -webkit-transform: translate3d(-25%, 0, 0);
-          transform: translate3d(-25%, 0, 0);
+[data-scroll].fadein {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }
 
-[data-scroll="in"],
-[data-scroll="in"]:nth-child(odd) {
+[data-scroll="in"].fadeinup {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+[data-scroll="in"].fadein {
   opacity: 1;
 }
 

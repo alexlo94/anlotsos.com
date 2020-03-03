@@ -120,12 +120,12 @@ window.addEventListener("scroll", function() {
 
 /* Intersection Observer for scroll animations */
 // get all page sections
-const sections = document.querySelectorAll(".page-section");
+const sections = document.querySelectorAll("[data-scroll]");
 
 //define io options
 const options = {
     rootMargin: '0px',
-    threshold: 0.1
+    threshold: 0.15
 }
 
 //define io callback function
@@ -133,6 +133,8 @@ const callback = function(entries, observer) {
     for(let entry of entries) {
         if(entry.isIntersecting) {
             entry.target.dataset.scroll = "in";
+        } else {
+            console.log(entry);
         }
     }
 }
