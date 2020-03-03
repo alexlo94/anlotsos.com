@@ -133,8 +133,6 @@ const callback = function(entries, observer) {
     for(let entry of entries) {
         if(entry.isIntersecting) {
             entry.target.dataset.scroll = "in";
-        } else {
-            console.log(entry);
         }
     }
 }
