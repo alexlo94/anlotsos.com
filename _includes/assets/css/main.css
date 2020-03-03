@@ -591,7 +591,8 @@ a.inline:visited {
 
 .card {
   padding: 1.5rem;
-  background-color: rgba(200, 44, 255, 0.2);
+  background-color: rgba(200, 44, 255, 0.1);
+  border-radius: 3px;
 }
 
 .card * {
@@ -601,7 +602,7 @@ a.inline:visited {
 .tags {
   font-size: 1rem;
   font-family: "Roboto Mono", monospace;
-  color: #8d3fa9;
+  color: rgba(50, 9, 64, 0.8);
 }
 
 .filter {
