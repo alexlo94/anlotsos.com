@@ -3,11 +3,11 @@
     <div>
         <article class="card stack s1 justify-content:space-between" data-tags="{{ Project.data.tags | separate }}">
             <div class="card-header stack">
-                <div class="frame image">
+                <a href="{{ Project.url }}"><div class="frame image">
                     <img class="lazyload" src="{{ Project.data.thumbnailSrc }}" alt="{{ Project.data.thumbnailAlt }}">
-                </div>
+                </div></a>
                 <div class="title stack s-3">
-                    <h4>{{ Project.data.title }}</h4>
+                    <a href="{{ Project.url }}"><h4>{{ Project.data.title }}</h4></a>
                     <span class="tags">{{ Project.data.tags | removeVal("Projects") | string | replace(",", " ") }}</span>
                 </div>
                 <p class="description">{{ Project.data.description }}</p>
