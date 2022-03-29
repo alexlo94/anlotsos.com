@@ -21,11 +21,11 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "eslint": "^6.8.0",
-    "stylelint": "^13.1.0",
+    "stylelint": "^13.13.1",
     "stylelint-config-standard": "^20.0.0"
   },
   "dependencies": {
-    "clean-css": "^4.2.3",
+    "clean-css": "^4.2.4",
     "html-minifier": "^4.0.0",
     "uglify-es": "^3.3.9"
   }
