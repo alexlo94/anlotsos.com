@@ -14,11 +14,13 @@
 </head>
 <body>
 
-  {% include "components/navbar.njk" %}
+  {# {% include "components/navbar.njk" %} #}
   <main class="content-wrapper stack s5">
     {{ layoutContent | safe }}
   </main>
+  {#
   {% include "components/footer.njk" %}
+  #}
   {% include "components/modal.njk" %}
   <script src="https://unpkg.com/animate-css-grid@latest"></script>
   <script>
