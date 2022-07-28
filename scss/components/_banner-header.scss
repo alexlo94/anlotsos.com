@@ -1,19 +1,14 @@
-.navbar {
-  padding: $s-1 5vw;
-  background: $color-lightest;
-  color: $color-darkest;
-  position: sticky;
-  z-index: 11;
-  top: 0;
-  left: 0;
-  right: 0;
+.banner-header {
+  padding: $s1 5vw;
+  background: $color-darkest;
+  color: $color-lightest;
   transition: top 0.3s ease-out;
   overflow: visible;
 
   .navlink {
     font-family: $font-mono;
     font-weight: 500;
-    font-size: $s1;
+    font-size: $s0;
   }
 
   .logo {
@@ -22,9 +17,9 @@
   }
 }
 
-@media screen and (max-width: 42em) {
-  .navbar {
-    padding: $s0 5vw;
+@media screen and (max-width: 48em) {
+  .banner-header {
+    padding: $s1 5vw;
     position: relative;
     box-shadow: none;
   }
