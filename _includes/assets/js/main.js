@@ -144,3 +144,26 @@ let observer = new IntersectionObserver(callback, options);
 for (let section of sections) {
     observer.observe(section);
 }
+
+/* ResizeObserver code for Reel component */
+(function() {
+    const className = 'reel';
+    const reels = Array.from(document.querySelectorAll('.${className}'));
+    const toggleOverflowClass = el => {
+        el.classList.toggle('overflowing', el.scrollWidth > el.clientWidth);
+    };
+
+    for (let reel of reels) {
+        if('ResizeObserver' in window) {
+            new ResizeObserver(entries => {
+                toggleOverflowClass(entries[0].target);
+            }).observe(reel);
+        }
+
+        if('MutationObserver' in window) {
+            new MutationObserver(entries => {
+                toggleOverflowClass(entries[0].target);
+            }).observe(reel, {childList: true});
+        }
+    }
+})();
