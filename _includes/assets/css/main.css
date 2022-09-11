@@ -283,6 +283,8 @@ a.inline:visited {
   overflow-x: auto;
   overflow-y: auto;
   scrollbar-color: #f8e3ff #320940;
+  scroll-padding: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 .reel::-webkit-scrollbar {
@@ -291,15 +293,17 @@ a.inline:visited {
 
 .reel::-webkit-scrollbar-track {
   background-color: #320940;
+  padding: 1rem;
 }
 
 .reel::-webkit-scrollbar-thumb {
   background-color: #320940;
-  background-image: linear-gradient(#320940 0, #320940 0.25rem, #f8e3ff 0.25rem, #f8e3ff 0.75rem, #320940 0.75rem);
+  background-image: linear-gradient(180deg, #320940 0, #320940 0.25rem, #f8e3ff 0.25rem, #f8e3ff 0.75rem, #320940 0.75rem);
 }
 
 .reel > * {
-  flex: 0 0 auto;
+  flex: 0 0 20rem;
+  align-content: stretch;
 }
 
 .reel > img {
@@ -311,11 +315,12 @@ a.inline:visited {
 .reel > * + * {
   -webkit-margin-start: 1rem;
           margin-inline-start: 1rem;
+  margin-left: 1rem;
 }
 
 .reel.overflowing {
-  -webkit-padding-after: 1rem;
-          padding-block-end: 1rem;
+  -webkit-padding-after: 5rem;
+          padding-block-end: 5rem;
 }
 
 .content-wrapper {
