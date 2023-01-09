@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/alexlo94/anlotsos.com#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy": "^1.0.2",
     "eslint": "^6.8.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^20.0.0"
